@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artigo sobre o QUnit </title>
+    <!--Inclui a folha de estilo do QUnit -->
+    <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.19.0.css">
+
+</head>
+
+<body>
+
+    <script language="javascript">
+        function obterNumeroMaior() {
+            var numeroMaior = -Infinity;
+            for (var i = 0; i < arguments.length; i++) {
+                if (arguments[i] > numeroMaior) {
+                    numeroMaior = arguments[i];
+                }
+            }
+
+            return numeroMaior;
+        }
+    </script>
+
+
+    <!-- Interface de usuário do QUnit-->
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <!-- Fim -->
+    <!-- Incluir arquivo javascript de funcionamento do QUnit-->
+    <script src="http://code.jquery.com/qunit/qunit-1.19.0.js"></script>
+    <!-- Incluir arquivo javascript com os testes utilizando o QUnit-->
+    <script src="tests.js"></script>
+
+</body>
+
+</html>
